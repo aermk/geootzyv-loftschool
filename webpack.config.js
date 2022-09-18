@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+    optimization: {
+        minimize: false
+    },
     entry: './sourse/js/index.js', // точка входа, так же может быть объект с точками входа
     mode: process.env.NODE_ENV || 'development', // можем из консоли попасть в исходник, в продакшене не можем
     output: { // то, что нам выдаст вебпак

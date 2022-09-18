@@ -1,10 +1,6 @@
 const popupForm = `
 
 <form id="add-form" class="form">
-  <div class="location">Location</div>
-  <hr>
-  <div class="form-row">
-    <h4 class="existing-reviews">no reviews for this place</h4>
   </div>
     <div class="form-row">
       <h3 class="form-title">Leave your feedback:</h3>

@@ -1,78 +1,133 @@
 const popupForm = require('./popupForm');
+const createReviewForm = require('./reviewsForm');
+const { getReadyReviewsForm, getLocalStorageReview } = require('./listOfReviews');
 
 let map;
+let clusterer;
 
-function openModalWindow(coordinates) {
-    return new Promise((resolve) => {
-        resolve(
-            map.balloon.open(coordinates, {
-                content: popupForm,
-            }),
-        );
+function mapInit() {
+    map = new ymaps.Map('map', {
+        center: [61.78900090727265, 34.375410146877094],
+        zoom: 17,
     });
-    // map.balloon.open(coordinates, { // добавить await - дождаться, пока этот кусок кода выполнится,
-    //     // и затем продолжить выполнение внутри этой функции (вместо промиса)
-    //     content: popupForm,
-    // });
+
+    map.events.add('click', (e) => {
+        const coordinates = e.get('coords');
+        openModalWindow(map, coordinates);
+    });
+
+    clusterer = new ymaps.Clusterer({
+        preset: 'islands#invertedVioletClusterIcons',
+        clusterDisableClickZoom: true,
+        groupByCoordinates: false, // * Ставим true, если хотим кластеризовать только точки с одинаковыми координатами.
+
+    });
+    clusterer.options.set('hasBalloon', false)
+
+    clusterer.events.add('click', function (e) {
+        let getPlacemarksInCluster = e.get('target').getGeoObjects();
+        openModalWindow(map, e.get('coords'), getPlacemarksInCluster);
+    });
+
+    clusterer.options.set({
+        gridSize: 70,
+        clusterDisableClickZoom: true
+    });
+
+    addPlacemarksOnMap(map); // вызываем получение объектов
 }
 
-function getAddress(coords) {
+function addPlacemarksOnMap(map) { // приходит карта
+    const reviewsList = getLocalStorageReview();
+    console.log(reviewsList, 'reviewsList')
+
+    const listOfCoordinates = [];
+
+    for (const review of reviewsList) { //проходим по каждому ревью в списке, если он есть
+        // создаем метку по координатам ревью
+
+        const placemark = new ymaps.Placemark(review.coordinates, {}, {
+            preset: 'islands#dotIcon',
+            iconColor: '#E8AA4DFF'
+        })
+
+        placemark.events.add('click', e => { // по клику на метку
+            e.stopPropagation();
+            const adress = getAddress(e.get('coords'))
+            console.log(adress, 'adress')
+
+            openModalWindow(map, e.get('coords'), [e.get('target')]) // приходит карта, координаты клика, существующие метки
+        })
+
+        listOfCoordinates.push(placemark);
+    }
+
+    clusterer.removeAll()
+    map.geoObjects.remove(clusterer)
+
+    clusterer.add(listOfCoordinates);
+    map.geoObjects.add(clusterer);
+}
+
+async function getAddress(coords) {
     return new Promise((resolve) => {
         ymaps.geocode(coords).then(function (res) {
             const firstGeoObject = res.geoObjects.get(0);
-            let = adress = firstGeoObject.getAddressLine();
+            let adress = firstGeoObject.getAddressLine();
             resolve(adress);
         })
     });
 }
 
-let storage = localStorage;
-console.log(storage, 'storage')
+async function openModalWindow(map, coordinates, currentPlacemarks = []) {
+    //currentGeoObjects пустое при новой метке
 
-function mapInit() {
-    map = new ymaps.Map('map', {
-        center: [61.78900090727265, 34.375410146877094],
-        zoom: 15,
-    });
+    let location = await getAddress(coordinates);
 
-    map.events.add('click', (e) => {
+    await map.balloon.open(coordinates, {
+        content: `<div class="location">${location}</div>` + `<hr>` +
+            `<div class="existingReviewsList">
+        ${await getReadyReviewsForm(currentPlacemarks) || `<h4>no fucking reviews</h4>`}
+        </div> 
+        ` + popupForm,
+        close: false,
+    })
 
-        const coordinates = e.get('coords');
+    const existingReviewsList = document.querySelector('.existingReviewsList');
 
-        openModalWindow(coordinates).then(() => {
-            const addBtn = document.querySelector('#add-btn');
+    const addBtn = document.querySelector('#add-btn');
 
-            getAddress(coordinates).then((adress) => {
-                const locationDiv = document.querySelector('.location');
-                locationDiv.innerHTML = adress;
-            });
+    addBtn.addEventListener('click', (e) => {
+        e.preventDefault();
 
-            const getAuthor = document.querySelector('.author');
-            const getPlace = document.querySelector('.place');
-            const getReview = document.querySelector('.review');
+        const getAuthor = document.querySelector('.author');
+        const getPlace = document.querySelector('.place');
+        const getReview = document.querySelector('.review');
 
-            addBtn.addEventListener('click', (e) => {
-                e.preventDefault();
+        const review = {
+            coordinates,
+            author: getAuthor.value,
+            place: getPlace.value,
+            reviewText: getReview.value,
+        }
 
-                console.log(getAuthor.value, getPlace.value, getReview.value, 'данные формы')
+        getAuthor.value = '';
+        getPlace.value = '';
+        getReview.value = '';
 
-                storage.data = JSON.stringify({ // добавление в сторэдж
-                    authorName: getAuthor.value,
-                    place: getPlace.value,
-                    review: getReview.value,
-                })
+        localStorage.reviews = JSON.stringify([...getLocalStorageReview(), review])
 
-                map.geoObjects.add(new ymaps.Placemark(coordinates, {
-                    balloonContent: 'fix: Сюда тоже добавить форму'
-                }, {
-                    preset: 'islands#dotIcon',
-                    iconColor: '#E8AA4DFF'
-                }))
-                map.balloon.close();
-            })
-        });
-    });
-
+        getReadyReviewsForm(currentPlacemarks).then(() => {
+            const warning = document.querySelector('h4');
+            warning?.remove();
+            const reviewForNewPlacemark = document.createElement('div');
+            reviewForNewPlacemark.classList.add('existingReviewItem');
+            let form = createReviewForm(review.author, review.place, review.reviewText);
+            reviewForNewPlacemark.innerHTML = form;
+            existingReviewsList.append(reviewForNewPlacemark);
+        })
+        addPlacemarksOnMap(map);
+    })
 }
 
 ymaps.ready(mapInit);

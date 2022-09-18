@@ -1,9 +1,11 @@
 .form {
     width: 320px;
     overflow: scroll;
-    height: 100%;
 }
 
+.location {
+    width: 300px;
+}
 
 .form-title {
     font-size: 16px;
@@ -59,21 +61,3 @@
     border-radius: 3px;
     background-color: #ffe54c;
 }
-
-// .btn::after {
-//     content: "";
-//     background-color: #ffe54c;
-//     border-radius: 3px;
-//     width: 100%;
-//     z-index: -1;
-//     position: absolute;
-//     height: 100%;
-//     top: 7px;
-//     left: 7px;
-//     transition: 0.2s;
-// }
-
-// .btn:hover::after {
-//     top: 0px;
-//     left: 0px;
-// }
