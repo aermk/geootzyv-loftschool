@@ -14,7 +14,7 @@ async function getReadyReviewsForm(currentGeoObjects) { // принимает м
     console.log(currentReviewsList, 'currentReviewsList')
 
     for (const review of reviews) { // идем по каждому ревью из сторэджа
-        let form = createReviewForm(review.author, review.place, review.reviewText);
+        let form = createReviewForm(review.author, review.place, review.reviewText, review.timestamp);
         if (currentGeoObjects.some((geoObject) => JSON.stringify(geoObject.geometry._coordinates) === JSON.stringify(review.coordinates))) {
             reviewListHTML += form;
         }
