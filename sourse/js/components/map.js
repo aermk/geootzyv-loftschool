@@ -9,7 +9,7 @@ let clusterer;
 function mapInit() {
     map = new ymaps.Map('map', {
         center: [61.78900090727265, 34.375410146877094],
-        zoom: 17,
+        zoom: 18,
     });
 
     map.events.add('click', (e) => {
@@ -17,11 +17,36 @@ function mapInit() {
         openModalWindow(map, coordinates);
     });
 
-    var customItemContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<h2 class=ballon_header>{{ properties.balloonContentHeader|raw }}</h2>' +
-        '<a href="" class=ballon_adressLink>{{ properties.balloonContentBody_adressLink|raw }}</a>' +
-        '<div class=ballon_body>{{ properties.balloonContentBody|raw }}</div>' +
-        '<h5 class=ballon_footer>{{ properties.balloonContentFooter|raw }}</h5>'
+    const customItemContentLayout = ymaps.templateLayoutFactory.createClass(
+
+        `<div class="ballon-content">
+            <div class="ballon-header">
+                <div class="title">{{ properties.place }}</div>
+            <br>
+                <a href="" class="address">{{ properties.address }}</a>
+            </div>
+
+            <div class="ballon-body">{{ properties.reviewText }}</div>
+
+            <div class="ballon-footer">{{ properties.timestamp }}</div>
+        </div>`, {
+        build: function () {
+            customItemContentLayout.superclass.build.call(this);
+            const elemAddress = this.getElement().querySelector(".address");
+            const coords = this.getData().geoObject.geometry.getCoordinates();
+            const dataOfPlacemark = this.getData().geoObject.properties.get(0);
+
+            ymaps.geocode(coords).then((result) => {
+                return result.geoObjects.get(0).getAddressLine();
+            }).then(address => {
+                elemAddress.innerText = address;
+            });
+            elemAddress.addEventListener("click", event => {
+                event.preventDefault();
+                openModalWindow(map, coords, [], dataOfPlacemark);
+            });
+        }
+    }
     );
 
     clusterer = new ymaps.Clusterer({
@@ -38,19 +63,6 @@ function mapInit() {
     });
 
     addPlacemarksOnMap(map); // вызываем получение объектов
-
-    clusterer.events.add('balloonopen', (event) => { // по клику на кластер ДОДЕЛАТЬ
-        const adressLink = document.querySelector('.ballon_adressLink');
-        // let getPlacemarksInCluster = event.get('target').getGeoObjects(); // следующая строчка 
-        // не отрабатывает, если создать getPlacemarksInCluster
-        console.log(adressLink, 'adressLink');
-
-        adressLink.addEventListener('click', (e) => {
-            // не работает с getPlacemarksInCluster
-            e.preventDefault();
-            console.log('here')
-        })
-    })
 }
 
 function addPlacemarksOnMap(map) { // приходит карта
@@ -62,25 +74,20 @@ function addPlacemarksOnMap(map) { // приходит карта
     for (const review of reviewsList) { //проходим по каждому ревью в списке, если он есть
         // создаем метку по координатам ревью
 
-        const placemark = new ymaps.Placemark(review.coordinates,
-            {
-                balloonContentHeader: review.place,
-                balloonContentBody: review.reviewText,
-                balloonContentBody_adressLink: review.location,
-                balloonContentFooter: review.timestamp
-            },
-            {
-                preset: 'islands#dotIcon',
-                iconColor: '#E8AA4DFF'
-            })
+        let placemark = new ymaps.Placemark(review.coordinates, {
+            place: review.place,
+            reviewText: review.reviewText,
+            timestamp: review.timestamp,
+            author: review.author,
+            adress: review.location
+        }, {
+            preset: "islands#violetDotIcon"
+        });
 
 
         placemark.events.add('click', e => { // по клику на метку
             placemark.options.set('hasBalloon', false)
             e.stopPropagation();
-
-            const adress = getAddress(e.get('coords'))
-
             openModalWindow(map, e.get('coords'), [e.get('target')]) // приходит карта, координаты клика, существующие метки
         })
         listOfCoordinates.push(placemark);
@@ -103,15 +110,14 @@ async function getAddress(coords) {
     });
 }
 
-async function openModalWindow(map, coordinates, currentPlacemarks = []) {
+async function openModalWindow(map, coordinates, currentPlacemarks = [], getReviewOfPlacemark = {}) {
     //currentGeoObjects пустое при новой метке
-
     let location = await getAddress(coordinates);
 
     await map.balloon.open(coordinates, {
         content: `<div class="location">${location}</div>` + `<hr>` +
             `<div class="existingReviewsList">
-        ${await getReadyReviewsForm(currentPlacemarks) || `<h4>no fucking reviews</h4>`}
+        ${await getReadyReviewsForm(currentPlacemarks, getReviewOfPlacemark) || `<h4>no fucking reviews</h4>`}
         </div> 
         ` + popupForm,
         close: false,
@@ -144,7 +150,7 @@ async function openModalWindow(map, coordinates, currentPlacemarks = []) {
 
         localStorage.reviews = JSON.stringify([...getLocalStorageReview(), review])
 
-        getReadyReviewsForm(currentPlacemarks).then(() => {
+        getReadyReviewsForm(currentPlacemarks, getReviewOfPlacemark).then(() => {
             const warning = document.querySelector('h4');
             warning?.remove();
             const reviewForNewPlacemark = document.createElement('div');
