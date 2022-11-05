@@ -1,20 +1,21 @@
-import { format } from 'date-fns'
 const popupForm = require('./popupForm');
 const createReviewForm = require('./reviewsForm');
 const { getReadyReviewsForm, getLocalStorageReview } = require('./listOfReviews');
+const fns = require('date-fns');
 
 let map;
 let clusterer;
+const listOfPlacemarkLS = [];
 
 function mapInit() {
     map = new ymaps.Map('map', {
         center: [61.78900090727265, 34.375410146877094],
-        zoom: 18,
+        zoom: 16,
     });
 
     map.events.add('click', (e) => {
         const coordinates = e.get('coords');
-        openModalWindow(map, coordinates);
+        openModalWindow(coordinates);
     });
 
     const customItemContentLayout = ymaps.templateLayoutFactory.createClass(
@@ -23,7 +24,7 @@ function mapInit() {
             <div class="ballon-header">
                 <div class="title">{{ properties.place }}</div>
             <br>
-                <a href="" class="address">{{ properties.address }}</a>
+                <a href="" class="adress">{{ properties.adress }}</a>
             </div>
 
             <div class="ballon-body">{{ properties.reviewText }}</div>
@@ -32,18 +33,17 @@ function mapInit() {
         </div>`, {
         build: function () {
             customItemContentLayout.superclass.build.call(this);
-            const elemAddress = this.getElement().querySelector(".address");
+            const elemAddress = this.getElement().querySelector(".adress");
             const coords = this.getData().geoObject.geometry.getCoordinates();
-            const dataOfPlacemark = this.getData().geoObject.properties.get(0);
 
             ymaps.geocode(coords).then((result) => {
                 return result.geoObjects.get(0).getAddressLine();
-            }).then(address => {
-                elemAddress.innerText = address;
+            }).then(adress => {
+                elemAddress.innerText = adress;
             });
             elemAddress.addEventListener("click", event => {
                 event.preventDefault();
-                openModalWindow(map, coords, [], dataOfPlacemark);
+                openModalWindow(coords);
             });
         }
     }
@@ -62,41 +62,51 @@ function mapInit() {
         clusterDisableClickZoom: true
     });
 
-    addPlacemarksOnMap(map); // вызываем получение объектов
+    addPlacemarksOnMap(map);
 }
 
-function addPlacemarksOnMap(map) { // приходит карта
+function createPlacemark(review) {
+    let placemark = new ymaps.Placemark(review.coordinates, {
+        place: review.place,
+        reviewText: review.reviewText,
+        timestamp: review.timestamp,
+        author: review.author,
+        adress: review.location,
+        coordinates: review.coordinates
+    }, {
+        preset: "islands#violetDotIcon"
+    });
+
+    placemark.events.add('click', e => {
+        placemark.options.set('hasBalloon', false)
+        e.stopPropagation();
+        openModalWindow(e.get('target').geometry.getCoordinates());
+    })
+    listOfPlacemarkLS.push(placemark);
+}
+
+function addNewPlacemarks(currentPlacemarks) {
+
+    for (const review of currentPlacemarks) {
+        createPlacemark(review);
+    }
+
+    clusterer.add(listOfPlacemarkLS);
+    map.geoObjects.add(clusterer);
+};
+
+function addPlacemarksOnMap(map) {
 
     const reviewsList = getLocalStorageReview();
 
-    const listOfCoordinates = [];
-
-    for (const review of reviewsList) { //проходим по каждому ревью в списке, если он есть
-        // создаем метку по координатам ревью
-
-        let placemark = new ymaps.Placemark(review.coordinates, {
-            place: review.place,
-            reviewText: review.reviewText,
-            timestamp: review.timestamp,
-            author: review.author,
-            adress: review.location
-        }, {
-            preset: "islands#violetDotIcon"
-        });
-
-
-        placemark.events.add('click', e => { // по клику на метку
-            placemark.options.set('hasBalloon', false)
-            e.stopPropagation();
-            openModalWindow(map, e.get('coords'), [e.get('target')]) // приходит карта, координаты клика, существующие метки
-        })
-        listOfCoordinates.push(placemark);
+    for (const review of reviewsList) {
+        createPlacemark(review);
     }
 
     clusterer.removeAll();
     map.geoObjects.remove(clusterer);
 
-    clusterer.add(listOfCoordinates);
+    clusterer.add(listOfPlacemarkLS);
     map.geoObjects.add(clusterer);
 }
 
@@ -110,14 +120,16 @@ async function getAddress(coords) {
     });
 }
 
-async function openModalWindow(map, coordinates, currentPlacemarks = [], getReviewOfPlacemark = {}) {
-    //currentGeoObjects пустое при новой метке
+async function openModalWindow(coordinates) {
+    const currentPlacemarks = listOfPlacemarkLS
+        .filter((i) => coordinates[0] === i.properties._data.coordinates[0] && coordinates[1] === i.properties._data.coordinates[1])
+
     let location = await getAddress(coordinates);
 
     await map.balloon.open(coordinates, {
         content: `<div class="location">${location}</div>` + `<hr>` +
             `<div class="existingReviewsList">
-        ${await getReadyReviewsForm(currentPlacemarks, getReviewOfPlacemark) || `<h4>no fucking reviews</h4>`}
+        ${await getReadyReviewsForm(currentPlacemarks) || `<h4>no reviews</h4>`}
         </div> 
         ` + popupForm,
         close: false,
@@ -130,10 +142,12 @@ async function openModalWindow(map, coordinates, currentPlacemarks = [], getRevi
     addBtn.addEventListener('click', (e) => {
         e.preventDefault();
 
+        let currentPlasemarks = [];
+
         const getAuthor = document.querySelector('.author');
         const getPlace = document.querySelector('.place');
         const getReview = document.querySelector('.review');
-        const timestamp = format(new Date(), 'PPp');
+        const timestamp = fns.format(new Date(), 'PPp');
 
         const review = {
             coordinates,
@@ -148,18 +162,18 @@ async function openModalWindow(map, coordinates, currentPlacemarks = [], getRevi
         getPlace.value = '';
         getReview.value = '';
 
-        localStorage.reviews = JSON.stringify([...getLocalStorageReview(), review])
+        currentPlasemarks.push(review);
+        addNewPlacemarks(currentPlasemarks);
 
-        getReadyReviewsForm(currentPlacemarks, getReviewOfPlacemark).then(() => {
-            const warning = document.querySelector('h4');
-            warning?.remove();
-            const reviewForNewPlacemark = document.createElement('div');
-            reviewForNewPlacemark.classList.add('existingReviewItem');
-            let form = createReviewForm(review.author, review.place, review.reviewText, review.timestamp);
-            reviewForNewPlacemark.innerHTML = form;
-            existingReviewsList.append(reviewForNewPlacemark);
-        })
-        addPlacemarksOnMap(map);
+        localStorage.reviews = JSON.stringify([...getLocalStorageReview(), review]);
+
+        const warning = document.querySelector('h4');
+        warning?.remove();
+        const reviewForNewPlacemark = document.createElement('div');
+        reviewForNewPlacemark.classList.add('existingReviewItem');
+        let form = createReviewForm(review.author, review.place, review.reviewText, review.timestamp);
+        reviewForNewPlacemark.innerHTML = form;
+        existingReviewsList.append(reviewForNewPlacemark);
     })
 }
 
