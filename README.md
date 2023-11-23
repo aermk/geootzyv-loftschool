@@ -16,10 +16,10 @@ When the page is reloaded, all reviews and placemarks are restored (LocalStorage
 
 ### Built with
 
-JavaScript
-Webpack
-Yandex Maps API
-HTML, CSS
+- JavaScript
+- Webpack
+- Yandex Maps API
+- HTML, CSS
 
 ### Demo link
 https://aermk.github.io/geootzyv-loftschool/dist/index.html
