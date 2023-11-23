@@ -1,63 +1,63 @@
 .form {
-    width: 320px;
-    overflow: scroll;
+  width: 320px;
+  overflow: scroll;
 }
 
 .location {
-    width: 300px;
+  width: 300px;
 }
 
 .form-title {
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 1px;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .form-row {
-    width: 100%;
-    margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .form-input {
-    padding: 10px 10px;
-    font-size: 14px;
-    font-weight: 400;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 3px;
-    border: 0.5px solid black;
+  padding: 10px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 0.5px solid black;
 }
 
 .form-input:focus {
-    outline: none;
-    border: 0.5px solid #E8AA4DFF;
+  outline: none;
+  border: 0.5px solid #e8aa4dff;
 }
 
 .form-input::placeholder {
-    color: #CFCFCF;
+  color: #cfcfcf;
 }
 
 .form-input--textarea {
-    height: 98px;
-    resize: none;
-    font-family: unset;
-    font-size: 14px;
+  height: 98px;
+  resize: none;
+  font-family: unset;
+  font-size: 14px;
 }
 
 .btn-footer {
-    text-align: center;
+  text-align: center;
 }
 
 .btn {
-    font-size: 16px;
-    font-weight: 200;
-    letter-spacing: 1px;
-    padding: 7px 50px;
-    outline: 0;
-    border: 0.5px solid black;
-    cursor: pointer;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 3px;
-    background-color: #ffe54c;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 7px 50px;
+  outline: 0;
+  border: 0.5px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  background-color: #ffe54c;
 }
