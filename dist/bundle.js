@@ -10,263 +10,263 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "add": () => (/* reexport */ add),
-  "addBusinessDays": () => (/* reexport */ addBusinessDays),
-  "addDays": () => (/* reexport */ addDays),
-  "addHours": () => (/* reexport */ addHours),
-  "addISOWeekYears": () => (/* reexport */ addISOWeekYears),
-  "addMilliseconds": () => (/* reexport */ addMilliseconds),
-  "addMinutes": () => (/* reexport */ addMinutes),
-  "addMonths": () => (/* reexport */ addMonths),
-  "addQuarters": () => (/* reexport */ addQuarters),
-  "addSeconds": () => (/* reexport */ addSeconds),
-  "addWeeks": () => (/* reexport */ addWeeks),
-  "addYears": () => (/* reexport */ addYears),
-  "areIntervalsOverlapping": () => (/* reexport */ areIntervalsOverlapping),
-  "clamp": () => (/* reexport */ clamp),
-  "closestIndexTo": () => (/* reexport */ closestIndexTo),
-  "closestTo": () => (/* reexport */ closestTo),
-  "compareAsc": () => (/* reexport */ compareAsc),
-  "compareDesc": () => (/* reexport */ compareDesc),
-  "daysInWeek": () => (/* reexport */ daysInWeek),
-  "daysInYear": () => (/* reexport */ daysInYear),
-  "daysToWeeks": () => (/* reexport */ daysToWeeks),
-  "differenceInBusinessDays": () => (/* reexport */ differenceInBusinessDays),
-  "differenceInCalendarDays": () => (/* reexport */ differenceInCalendarDays),
-  "differenceInCalendarISOWeekYears": () => (/* reexport */ differenceInCalendarISOWeekYears),
-  "differenceInCalendarISOWeeks": () => (/* reexport */ differenceInCalendarISOWeeks),
-  "differenceInCalendarMonths": () => (/* reexport */ differenceInCalendarMonths),
-  "differenceInCalendarQuarters": () => (/* reexport */ differenceInCalendarQuarters),
-  "differenceInCalendarWeeks": () => (/* reexport */ differenceInCalendarWeeks),
-  "differenceInCalendarYears": () => (/* reexport */ differenceInCalendarYears),
-  "differenceInDays": () => (/* reexport */ differenceInDays),
-  "differenceInHours": () => (/* reexport */ differenceInHours),
-  "differenceInISOWeekYears": () => (/* reexport */ differenceInISOWeekYears),
-  "differenceInMilliseconds": () => (/* reexport */ differenceInMilliseconds),
-  "differenceInMinutes": () => (/* reexport */ differenceInMinutes),
-  "differenceInMonths": () => (/* reexport */ differenceInMonths),
-  "differenceInQuarters": () => (/* reexport */ differenceInQuarters),
-  "differenceInSeconds": () => (/* reexport */ differenceInSeconds),
-  "differenceInWeeks": () => (/* reexport */ differenceInWeeks),
-  "differenceInYears": () => (/* reexport */ differenceInYears),
-  "eachDayOfInterval": () => (/* reexport */ eachDayOfInterval),
-  "eachHourOfInterval": () => (/* reexport */ eachHourOfInterval),
-  "eachMinuteOfInterval": () => (/* reexport */ eachMinuteOfInterval),
-  "eachMonthOfInterval": () => (/* reexport */ eachMonthOfInterval),
-  "eachQuarterOfInterval": () => (/* reexport */ eachQuarterOfInterval),
-  "eachWeekOfInterval": () => (/* reexport */ eachWeekOfInterval),
-  "eachWeekendOfInterval": () => (/* reexport */ eachWeekendOfInterval),
-  "eachWeekendOfMonth": () => (/* reexport */ eachWeekendOfMonth),
-  "eachWeekendOfYear": () => (/* reexport */ eachWeekendOfYear),
-  "eachYearOfInterval": () => (/* reexport */ eachYearOfInterval),
-  "endOfDay": () => (/* reexport */ endOfDay),
-  "endOfDecade": () => (/* reexport */ endOfDecade),
-  "endOfHour": () => (/* reexport */ endOfHour),
-  "endOfISOWeek": () => (/* reexport */ endOfISOWeek),
-  "endOfISOWeekYear": () => (/* reexport */ endOfISOWeekYear),
-  "endOfMinute": () => (/* reexport */ endOfMinute),
-  "endOfMonth": () => (/* reexport */ endOfMonth),
-  "endOfQuarter": () => (/* reexport */ endOfQuarter),
-  "endOfSecond": () => (/* reexport */ endOfSecond),
-  "endOfToday": () => (/* reexport */ endOfToday),
-  "endOfTomorrow": () => (/* reexport */ endOfTomorrow),
-  "endOfWeek": () => (/* reexport */ endOfWeek),
-  "endOfYear": () => (/* reexport */ endOfYear),
-  "endOfYesterday": () => (/* reexport */ endOfYesterday),
-  "format": () => (/* reexport */ format),
-  "formatDistance": () => (/* reexport */ formatDistance_formatDistance),
-  "formatDistanceStrict": () => (/* reexport */ formatDistanceStrict),
-  "formatDistanceToNow": () => (/* reexport */ formatDistanceToNow),
-  "formatDistanceToNowStrict": () => (/* reexport */ formatDistanceToNowStrict),
-  "formatDuration": () => (/* reexport */ formatDuration),
-  "formatISO": () => (/* reexport */ formatISO),
-  "formatISO9075": () => (/* reexport */ formatISO9075),
-  "formatISODuration": () => (/* reexport */ formatISODuration),
-  "formatRFC3339": () => (/* reexport */ formatRFC3339),
-  "formatRFC7231": () => (/* reexport */ formatRFC7231),
-  "formatRelative": () => (/* reexport */ formatRelative_formatRelative),
-  "fromUnixTime": () => (/* reexport */ fromUnixTime),
-  "getDate": () => (/* reexport */ getDate),
-  "getDay": () => (/* reexport */ getDay),
-  "getDayOfYear": () => (/* reexport */ getDayOfYear),
-  "getDaysInMonth": () => (/* reexport */ getDaysInMonth),
-  "getDaysInYear": () => (/* reexport */ getDaysInYear),
-  "getDecade": () => (/* reexport */ getDecade),
-  "getDefaultOptions": () => (/* reexport */ getDefaultOptions_getDefaultOptions),
-  "getHours": () => (/* reexport */ getHours),
-  "getISODay": () => (/* reexport */ getISODay),
-  "getISOWeek": () => (/* reexport */ getISOWeek),
-  "getISOWeekYear": () => (/* reexport */ getISOWeekYear),
-  "getISOWeeksInYear": () => (/* reexport */ getISOWeeksInYear),
-  "getMilliseconds": () => (/* reexport */ getMilliseconds),
-  "getMinutes": () => (/* reexport */ getMinutes),
-  "getMonth": () => (/* reexport */ getMonth),
-  "getOverlappingDaysInIntervals": () => (/* reexport */ getOverlappingDaysInIntervals),
-  "getQuarter": () => (/* reexport */ getQuarter),
-  "getSeconds": () => (/* reexport */ getSeconds),
-  "getTime": () => (/* reexport */ getTime),
-  "getUnixTime": () => (/* reexport */ getUnixTime),
-  "getWeek": () => (/* reexport */ getWeek),
-  "getWeekOfMonth": () => (/* reexport */ getWeekOfMonth),
-  "getWeekYear": () => (/* reexport */ getWeekYear),
-  "getWeeksInMonth": () => (/* reexport */ getWeeksInMonth),
-  "getYear": () => (/* reexport */ getYear),
-  "hoursToMilliseconds": () => (/* reexport */ hoursToMilliseconds),
-  "hoursToMinutes": () => (/* reexport */ hoursToMinutes),
-  "hoursToSeconds": () => (/* reexport */ hoursToSeconds),
-  "intervalToDuration": () => (/* reexport */ intervalToDuration),
-  "intlFormat": () => (/* reexport */ intlFormat),
-  "intlFormatDistance": () => (/* reexport */ intlFormatDistance),
-  "isAfter": () => (/* reexport */ isAfter),
-  "isBefore": () => (/* reexport */ isBefore),
-  "isDate": () => (/* reexport */ isDate),
-  "isEqual": () => (/* reexport */ isEqual),
-  "isExists": () => (/* reexport */ isExists),
-  "isFirstDayOfMonth": () => (/* reexport */ isFirstDayOfMonth),
-  "isFriday": () => (/* reexport */ isFriday),
-  "isFuture": () => (/* reexport */ isFuture),
-  "isLastDayOfMonth": () => (/* reexport */ isLastDayOfMonth),
-  "isLeapYear": () => (/* reexport */ isLeapYear),
-  "isMatch": () => (/* reexport */ isMatch),
-  "isMonday": () => (/* reexport */ isMonday),
-  "isPast": () => (/* reexport */ isPast),
-  "isSameDay": () => (/* reexport */ isSameDay),
-  "isSameHour": () => (/* reexport */ isSameHour),
-  "isSameISOWeek": () => (/* reexport */ isSameISOWeek),
-  "isSameISOWeekYear": () => (/* reexport */ isSameISOWeekYear),
-  "isSameMinute": () => (/* reexport */ isSameMinute),
-  "isSameMonth": () => (/* reexport */ isSameMonth),
-  "isSameQuarter": () => (/* reexport */ isSameQuarter),
-  "isSameSecond": () => (/* reexport */ isSameSecond),
-  "isSameWeek": () => (/* reexport */ isSameWeek),
-  "isSameYear": () => (/* reexport */ isSameYear),
-  "isSaturday": () => (/* reexport */ isSaturday),
-  "isSunday": () => (/* reexport */ isSunday),
-  "isThisHour": () => (/* reexport */ isThisHour),
-  "isThisISOWeek": () => (/* reexport */ isThisISOWeek),
-  "isThisMinute": () => (/* reexport */ isThisMinute),
-  "isThisMonth": () => (/* reexport */ isThisMonth),
-  "isThisQuarter": () => (/* reexport */ isThisQuarter),
-  "isThisSecond": () => (/* reexport */ isThisSecond),
-  "isThisWeek": () => (/* reexport */ isThisWeek),
-  "isThisYear": () => (/* reexport */ isThisYear),
-  "isThursday": () => (/* reexport */ isThursday),
-  "isToday": () => (/* reexport */ isToday),
-  "isTomorrow": () => (/* reexport */ isTomorrow),
-  "isTuesday": () => (/* reexport */ isTuesday),
-  "isValid": () => (/* reexport */ isValid),
-  "isWednesday": () => (/* reexport */ isWednesday),
-  "isWeekend": () => (/* reexport */ isWeekend),
-  "isWithinInterval": () => (/* reexport */ isWithinInterval),
-  "isYesterday": () => (/* reexport */ isYesterday),
-  "lastDayOfDecade": () => (/* reexport */ lastDayOfDecade),
-  "lastDayOfISOWeek": () => (/* reexport */ lastDayOfISOWeek),
-  "lastDayOfISOWeekYear": () => (/* reexport */ lastDayOfISOWeekYear),
-  "lastDayOfMonth": () => (/* reexport */ lastDayOfMonth),
-  "lastDayOfQuarter": () => (/* reexport */ lastDayOfQuarter),
-  "lastDayOfWeek": () => (/* reexport */ lastDayOfWeek),
-  "lastDayOfYear": () => (/* reexport */ lastDayOfYear),
-  "lightFormat": () => (/* reexport */ lightFormat),
-  "max": () => (/* reexport */ max),
-  "maxTime": () => (/* reexport */ maxTime),
-  "milliseconds": () => (/* reexport */ milliseconds),
-  "millisecondsInHour": () => (/* reexport */ millisecondsInHour),
-  "millisecondsInMinute": () => (/* reexport */ millisecondsInMinute),
-  "millisecondsInSecond": () => (/* reexport */ millisecondsInSecond),
-  "millisecondsToHours": () => (/* reexport */ millisecondsToHours),
-  "millisecondsToMinutes": () => (/* reexport */ millisecondsToMinutes),
-  "millisecondsToSeconds": () => (/* reexport */ millisecondsToSeconds),
-  "min": () => (/* reexport */ min),
-  "minTime": () => (/* reexport */ minTime),
-  "minutesInHour": () => (/* reexport */ minutesInHour),
-  "minutesToHours": () => (/* reexport */ minutesToHours),
-  "minutesToMilliseconds": () => (/* reexport */ minutesToMilliseconds),
-  "minutesToSeconds": () => (/* reexport */ minutesToSeconds),
-  "monthsInQuarter": () => (/* reexport */ monthsInQuarter),
-  "monthsInYear": () => (/* reexport */ monthsInYear),
-  "monthsToQuarters": () => (/* reexport */ monthsToQuarters),
-  "monthsToYears": () => (/* reexport */ monthsToYears),
-  "nextDay": () => (/* reexport */ nextDay),
-  "nextFriday": () => (/* reexport */ nextFriday),
-  "nextMonday": () => (/* reexport */ nextMonday),
-  "nextSaturday": () => (/* reexport */ nextSaturday),
-  "nextSunday": () => (/* reexport */ nextSunday),
-  "nextThursday": () => (/* reexport */ nextThursday),
-  "nextTuesday": () => (/* reexport */ nextTuesday),
-  "nextWednesday": () => (/* reexport */ nextWednesday),
-  "parse": () => (/* reexport */ parse),
-  "parseISO": () => (/* reexport */ parseISO),
-  "parseJSON": () => (/* reexport */ parseJSON),
-  "previousDay": () => (/* reexport */ previousDay),
-  "previousFriday": () => (/* reexport */ previousFriday),
-  "previousMonday": () => (/* reexport */ previousMonday),
-  "previousSaturday": () => (/* reexport */ previousSaturday),
-  "previousSunday": () => (/* reexport */ previousSunday),
-  "previousThursday": () => (/* reexport */ previousThursday),
-  "previousTuesday": () => (/* reexport */ previousTuesday),
-  "previousWednesday": () => (/* reexport */ previousWednesday),
-  "quartersInYear": () => (/* reexport */ quartersInYear),
-  "quartersToMonths": () => (/* reexport */ quartersToMonths),
-  "quartersToYears": () => (/* reexport */ quartersToYears),
-  "roundToNearestMinutes": () => (/* reexport */ roundToNearestMinutes),
-  "secondsInDay": () => (/* reexport */ secondsInDay),
-  "secondsInHour": () => (/* reexport */ secondsInHour),
-  "secondsInMinute": () => (/* reexport */ secondsInMinute),
-  "secondsInMonth": () => (/* reexport */ secondsInMonth),
-  "secondsInQuarter": () => (/* reexport */ secondsInQuarter),
-  "secondsInWeek": () => (/* reexport */ secondsInWeek),
-  "secondsInYear": () => (/* reexport */ secondsInYear),
-  "secondsToHours": () => (/* reexport */ secondsToHours),
-  "secondsToMilliseconds": () => (/* reexport */ secondsToMilliseconds),
-  "secondsToMinutes": () => (/* reexport */ secondsToMinutes),
-  "set": () => (/* reexport */ set),
-  "setDate": () => (/* reexport */ setDate),
-  "setDay": () => (/* reexport */ setDay),
-  "setDayOfYear": () => (/* reexport */ setDayOfYear),
-  "setDefaultOptions": () => (/* reexport */ setDefaultOptions_setDefaultOptions),
-  "setHours": () => (/* reexport */ setHours),
-  "setISODay": () => (/* reexport */ setISODay),
-  "setISOWeek": () => (/* reexport */ setISOWeek),
-  "setISOWeekYear": () => (/* reexport */ setISOWeekYear),
-  "setMilliseconds": () => (/* reexport */ setMilliseconds),
-  "setMinutes": () => (/* reexport */ setMinutes),
-  "setMonth": () => (/* reexport */ setMonth),
-  "setQuarter": () => (/* reexport */ setQuarter),
-  "setSeconds": () => (/* reexport */ setSeconds),
-  "setWeek": () => (/* reexport */ setWeek),
-  "setWeekYear": () => (/* reexport */ setWeekYear),
-  "setYear": () => (/* reexport */ setYear),
-  "startOfDay": () => (/* reexport */ startOfDay),
-  "startOfDecade": () => (/* reexport */ startOfDecade),
-  "startOfHour": () => (/* reexport */ startOfHour),
-  "startOfISOWeek": () => (/* reexport */ startOfISOWeek),
-  "startOfISOWeekYear": () => (/* reexport */ startOfISOWeekYear),
-  "startOfMinute": () => (/* reexport */ startOfMinute),
-  "startOfMonth": () => (/* reexport */ startOfMonth),
-  "startOfQuarter": () => (/* reexport */ startOfQuarter),
-  "startOfSecond": () => (/* reexport */ startOfSecond),
-  "startOfToday": () => (/* reexport */ startOfToday),
-  "startOfTomorrow": () => (/* reexport */ startOfTomorrow),
-  "startOfWeek": () => (/* reexport */ startOfWeek),
-  "startOfWeekYear": () => (/* reexport */ startOfWeekYear),
-  "startOfYear": () => (/* reexport */ startOfYear),
-  "startOfYesterday": () => (/* reexport */ startOfYesterday),
-  "sub": () => (/* reexport */ sub),
-  "subBusinessDays": () => (/* reexport */ subBusinessDays),
-  "subDays": () => (/* reexport */ subDays),
-  "subHours": () => (/* reexport */ subHours),
-  "subISOWeekYears": () => (/* reexport */ subISOWeekYears),
-  "subMilliseconds": () => (/* reexport */ subMilliseconds),
-  "subMinutes": () => (/* reexport */ subMinutes),
-  "subMonths": () => (/* reexport */ subMonths),
-  "subQuarters": () => (/* reexport */ subQuarters),
-  "subSeconds": () => (/* reexport */ subSeconds),
-  "subWeeks": () => (/* reexport */ subWeeks),
-  "subYears": () => (/* reexport */ subYears),
-  "toDate": () => (/* reexport */ toDate),
-  "weeksToDays": () => (/* reexport */ weeksToDays),
-  "yearsToMonths": () => (/* reexport */ yearsToMonths),
-  "yearsToQuarters": () => (/* reexport */ yearsToQuarters)
+  add: () => (/* reexport */ add),
+  addBusinessDays: () => (/* reexport */ addBusinessDays),
+  addDays: () => (/* reexport */ addDays),
+  addHours: () => (/* reexport */ addHours),
+  addISOWeekYears: () => (/* reexport */ addISOWeekYears),
+  addMilliseconds: () => (/* reexport */ addMilliseconds),
+  addMinutes: () => (/* reexport */ addMinutes),
+  addMonths: () => (/* reexport */ addMonths),
+  addQuarters: () => (/* reexport */ addQuarters),
+  addSeconds: () => (/* reexport */ addSeconds),
+  addWeeks: () => (/* reexport */ addWeeks),
+  addYears: () => (/* reexport */ addYears),
+  areIntervalsOverlapping: () => (/* reexport */ areIntervalsOverlapping),
+  clamp: () => (/* reexport */ clamp),
+  closestIndexTo: () => (/* reexport */ closestIndexTo),
+  closestTo: () => (/* reexport */ closestTo),
+  compareAsc: () => (/* reexport */ compareAsc),
+  compareDesc: () => (/* reexport */ compareDesc),
+  daysInWeek: () => (/* reexport */ daysInWeek),
+  daysInYear: () => (/* reexport */ daysInYear),
+  daysToWeeks: () => (/* reexport */ daysToWeeks),
+  differenceInBusinessDays: () => (/* reexport */ differenceInBusinessDays),
+  differenceInCalendarDays: () => (/* reexport */ differenceInCalendarDays),
+  differenceInCalendarISOWeekYears: () => (/* reexport */ differenceInCalendarISOWeekYears),
+  differenceInCalendarISOWeeks: () => (/* reexport */ differenceInCalendarISOWeeks),
+  differenceInCalendarMonths: () => (/* reexport */ differenceInCalendarMonths),
+  differenceInCalendarQuarters: () => (/* reexport */ differenceInCalendarQuarters),
+  differenceInCalendarWeeks: () => (/* reexport */ differenceInCalendarWeeks),
+  differenceInCalendarYears: () => (/* reexport */ differenceInCalendarYears),
+  differenceInDays: () => (/* reexport */ differenceInDays),
+  differenceInHours: () => (/* reexport */ differenceInHours),
+  differenceInISOWeekYears: () => (/* reexport */ differenceInISOWeekYears),
+  differenceInMilliseconds: () => (/* reexport */ differenceInMilliseconds),
+  differenceInMinutes: () => (/* reexport */ differenceInMinutes),
+  differenceInMonths: () => (/* reexport */ differenceInMonths),
+  differenceInQuarters: () => (/* reexport */ differenceInQuarters),
+  differenceInSeconds: () => (/* reexport */ differenceInSeconds),
+  differenceInWeeks: () => (/* reexport */ differenceInWeeks),
+  differenceInYears: () => (/* reexport */ differenceInYears),
+  eachDayOfInterval: () => (/* reexport */ eachDayOfInterval),
+  eachHourOfInterval: () => (/* reexport */ eachHourOfInterval),
+  eachMinuteOfInterval: () => (/* reexport */ eachMinuteOfInterval),
+  eachMonthOfInterval: () => (/* reexport */ eachMonthOfInterval),
+  eachQuarterOfInterval: () => (/* reexport */ eachQuarterOfInterval),
+  eachWeekOfInterval: () => (/* reexport */ eachWeekOfInterval),
+  eachWeekendOfInterval: () => (/* reexport */ eachWeekendOfInterval),
+  eachWeekendOfMonth: () => (/* reexport */ eachWeekendOfMonth),
+  eachWeekendOfYear: () => (/* reexport */ eachWeekendOfYear),
+  eachYearOfInterval: () => (/* reexport */ eachYearOfInterval),
+  endOfDay: () => (/* reexport */ endOfDay),
+  endOfDecade: () => (/* reexport */ endOfDecade),
+  endOfHour: () => (/* reexport */ endOfHour),
+  endOfISOWeek: () => (/* reexport */ endOfISOWeek),
+  endOfISOWeekYear: () => (/* reexport */ endOfISOWeekYear),
+  endOfMinute: () => (/* reexport */ endOfMinute),
+  endOfMonth: () => (/* reexport */ endOfMonth),
+  endOfQuarter: () => (/* reexport */ endOfQuarter),
+  endOfSecond: () => (/* reexport */ endOfSecond),
+  endOfToday: () => (/* reexport */ endOfToday),
+  endOfTomorrow: () => (/* reexport */ endOfTomorrow),
+  endOfWeek: () => (/* reexport */ endOfWeek),
+  endOfYear: () => (/* reexport */ endOfYear),
+  endOfYesterday: () => (/* reexport */ endOfYesterday),
+  format: () => (/* reexport */ format),
+  formatDistance: () => (/* reexport */ formatDistance_formatDistance),
+  formatDistanceStrict: () => (/* reexport */ formatDistanceStrict),
+  formatDistanceToNow: () => (/* reexport */ formatDistanceToNow),
+  formatDistanceToNowStrict: () => (/* reexport */ formatDistanceToNowStrict),
+  formatDuration: () => (/* reexport */ formatDuration),
+  formatISO: () => (/* reexport */ formatISO),
+  formatISO9075: () => (/* reexport */ formatISO9075),
+  formatISODuration: () => (/* reexport */ formatISODuration),
+  formatRFC3339: () => (/* reexport */ formatRFC3339),
+  formatRFC7231: () => (/* reexport */ formatRFC7231),
+  formatRelative: () => (/* reexport */ formatRelative_formatRelative),
+  fromUnixTime: () => (/* reexport */ fromUnixTime),
+  getDate: () => (/* reexport */ getDate),
+  getDay: () => (/* reexport */ getDay),
+  getDayOfYear: () => (/* reexport */ getDayOfYear),
+  getDaysInMonth: () => (/* reexport */ getDaysInMonth),
+  getDaysInYear: () => (/* reexport */ getDaysInYear),
+  getDecade: () => (/* reexport */ getDecade),
+  getDefaultOptions: () => (/* reexport */ getDefaultOptions_getDefaultOptions),
+  getHours: () => (/* reexport */ getHours),
+  getISODay: () => (/* reexport */ getISODay),
+  getISOWeek: () => (/* reexport */ getISOWeek),
+  getISOWeekYear: () => (/* reexport */ getISOWeekYear),
+  getISOWeeksInYear: () => (/* reexport */ getISOWeeksInYear),
+  getMilliseconds: () => (/* reexport */ getMilliseconds),
+  getMinutes: () => (/* reexport */ getMinutes),
+  getMonth: () => (/* reexport */ getMonth),
+  getOverlappingDaysInIntervals: () => (/* reexport */ getOverlappingDaysInIntervals),
+  getQuarter: () => (/* reexport */ getQuarter),
+  getSeconds: () => (/* reexport */ getSeconds),
+  getTime: () => (/* reexport */ getTime),
+  getUnixTime: () => (/* reexport */ getUnixTime),
+  getWeek: () => (/* reexport */ getWeek),
+  getWeekOfMonth: () => (/* reexport */ getWeekOfMonth),
+  getWeekYear: () => (/* reexport */ getWeekYear),
+  getWeeksInMonth: () => (/* reexport */ getWeeksInMonth),
+  getYear: () => (/* reexport */ getYear),
+  hoursToMilliseconds: () => (/* reexport */ hoursToMilliseconds),
+  hoursToMinutes: () => (/* reexport */ hoursToMinutes),
+  hoursToSeconds: () => (/* reexport */ hoursToSeconds),
+  intervalToDuration: () => (/* reexport */ intervalToDuration),
+  intlFormat: () => (/* reexport */ intlFormat),
+  intlFormatDistance: () => (/* reexport */ intlFormatDistance),
+  isAfter: () => (/* reexport */ isAfter),
+  isBefore: () => (/* reexport */ isBefore),
+  isDate: () => (/* reexport */ isDate),
+  isEqual: () => (/* reexport */ isEqual),
+  isExists: () => (/* reexport */ isExists),
+  isFirstDayOfMonth: () => (/* reexport */ isFirstDayOfMonth),
+  isFriday: () => (/* reexport */ isFriday),
+  isFuture: () => (/* reexport */ isFuture),
+  isLastDayOfMonth: () => (/* reexport */ isLastDayOfMonth),
+  isLeapYear: () => (/* reexport */ isLeapYear),
+  isMatch: () => (/* reexport */ isMatch),
+  isMonday: () => (/* reexport */ isMonday),
+  isPast: () => (/* reexport */ isPast),
+  isSameDay: () => (/* reexport */ isSameDay),
+  isSameHour: () => (/* reexport */ isSameHour),
+  isSameISOWeek: () => (/* reexport */ isSameISOWeek),
+  isSameISOWeekYear: () => (/* reexport */ isSameISOWeekYear),
+  isSameMinute: () => (/* reexport */ isSameMinute),
+  isSameMonth: () => (/* reexport */ isSameMonth),
+  isSameQuarter: () => (/* reexport */ isSameQuarter),
+  isSameSecond: () => (/* reexport */ isSameSecond),
+  isSameWeek: () => (/* reexport */ isSameWeek),
+  isSameYear: () => (/* reexport */ isSameYear),
+  isSaturday: () => (/* reexport */ isSaturday),
+  isSunday: () => (/* reexport */ isSunday),
+  isThisHour: () => (/* reexport */ isThisHour),
+  isThisISOWeek: () => (/* reexport */ isThisISOWeek),
+  isThisMinute: () => (/* reexport */ isThisMinute),
+  isThisMonth: () => (/* reexport */ isThisMonth),
+  isThisQuarter: () => (/* reexport */ isThisQuarter),
+  isThisSecond: () => (/* reexport */ isThisSecond),
+  isThisWeek: () => (/* reexport */ isThisWeek),
+  isThisYear: () => (/* reexport */ isThisYear),
+  isThursday: () => (/* reexport */ isThursday),
+  isToday: () => (/* reexport */ isToday),
+  isTomorrow: () => (/* reexport */ isTomorrow),
+  isTuesday: () => (/* reexport */ isTuesday),
+  isValid: () => (/* reexport */ isValid),
+  isWednesday: () => (/* reexport */ isWednesday),
+  isWeekend: () => (/* reexport */ isWeekend),
+  isWithinInterval: () => (/* reexport */ isWithinInterval),
+  isYesterday: () => (/* reexport */ isYesterday),
+  lastDayOfDecade: () => (/* reexport */ lastDayOfDecade),
+  lastDayOfISOWeek: () => (/* reexport */ lastDayOfISOWeek),
+  lastDayOfISOWeekYear: () => (/* reexport */ lastDayOfISOWeekYear),
+  lastDayOfMonth: () => (/* reexport */ lastDayOfMonth),
+  lastDayOfQuarter: () => (/* reexport */ lastDayOfQuarter),
+  lastDayOfWeek: () => (/* reexport */ lastDayOfWeek),
+  lastDayOfYear: () => (/* reexport */ lastDayOfYear),
+  lightFormat: () => (/* reexport */ lightFormat),
+  max: () => (/* reexport */ max),
+  maxTime: () => (/* reexport */ maxTime),
+  milliseconds: () => (/* reexport */ milliseconds),
+  millisecondsInHour: () => (/* reexport */ millisecondsInHour),
+  millisecondsInMinute: () => (/* reexport */ millisecondsInMinute),
+  millisecondsInSecond: () => (/* reexport */ millisecondsInSecond),
+  millisecondsToHours: () => (/* reexport */ millisecondsToHours),
+  millisecondsToMinutes: () => (/* reexport */ millisecondsToMinutes),
+  millisecondsToSeconds: () => (/* reexport */ millisecondsToSeconds),
+  min: () => (/* reexport */ min),
+  minTime: () => (/* reexport */ minTime),
+  minutesInHour: () => (/* reexport */ minutesInHour),
+  minutesToHours: () => (/* reexport */ minutesToHours),
+  minutesToMilliseconds: () => (/* reexport */ minutesToMilliseconds),
+  minutesToSeconds: () => (/* reexport */ minutesToSeconds),
+  monthsInQuarter: () => (/* reexport */ monthsInQuarter),
+  monthsInYear: () => (/* reexport */ monthsInYear),
+  monthsToQuarters: () => (/* reexport */ monthsToQuarters),
+  monthsToYears: () => (/* reexport */ monthsToYears),
+  nextDay: () => (/* reexport */ nextDay),
+  nextFriday: () => (/* reexport */ nextFriday),
+  nextMonday: () => (/* reexport */ nextMonday),
+  nextSaturday: () => (/* reexport */ nextSaturday),
+  nextSunday: () => (/* reexport */ nextSunday),
+  nextThursday: () => (/* reexport */ nextThursday),
+  nextTuesday: () => (/* reexport */ nextTuesday),
+  nextWednesday: () => (/* reexport */ nextWednesday),
+  parse: () => (/* reexport */ parse),
+  parseISO: () => (/* reexport */ parseISO),
+  parseJSON: () => (/* reexport */ parseJSON),
+  previousDay: () => (/* reexport */ previousDay),
+  previousFriday: () => (/* reexport */ previousFriday),
+  previousMonday: () => (/* reexport */ previousMonday),
+  previousSaturday: () => (/* reexport */ previousSaturday),
+  previousSunday: () => (/* reexport */ previousSunday),
+  previousThursday: () => (/* reexport */ previousThursday),
+  previousTuesday: () => (/* reexport */ previousTuesday),
+  previousWednesday: () => (/* reexport */ previousWednesday),
+  quartersInYear: () => (/* reexport */ quartersInYear),
+  quartersToMonths: () => (/* reexport */ quartersToMonths),
+  quartersToYears: () => (/* reexport */ quartersToYears),
+  roundToNearestMinutes: () => (/* reexport */ roundToNearestMinutes),
+  secondsInDay: () => (/* reexport */ secondsInDay),
+  secondsInHour: () => (/* reexport */ secondsInHour),
+  secondsInMinute: () => (/* reexport */ secondsInMinute),
+  secondsInMonth: () => (/* reexport */ secondsInMonth),
+  secondsInQuarter: () => (/* reexport */ secondsInQuarter),
+  secondsInWeek: () => (/* reexport */ secondsInWeek),
+  secondsInYear: () => (/* reexport */ secondsInYear),
+  secondsToHours: () => (/* reexport */ secondsToHours),
+  secondsToMilliseconds: () => (/* reexport */ secondsToMilliseconds),
+  secondsToMinutes: () => (/* reexport */ secondsToMinutes),
+  set: () => (/* reexport */ set),
+  setDate: () => (/* reexport */ setDate),
+  setDay: () => (/* reexport */ setDay),
+  setDayOfYear: () => (/* reexport */ setDayOfYear),
+  setDefaultOptions: () => (/* reexport */ setDefaultOptions_setDefaultOptions),
+  setHours: () => (/* reexport */ setHours),
+  setISODay: () => (/* reexport */ setISODay),
+  setISOWeek: () => (/* reexport */ setISOWeek),
+  setISOWeekYear: () => (/* reexport */ setISOWeekYear),
+  setMilliseconds: () => (/* reexport */ setMilliseconds),
+  setMinutes: () => (/* reexport */ setMinutes),
+  setMonth: () => (/* reexport */ setMonth),
+  setQuarter: () => (/* reexport */ setQuarter),
+  setSeconds: () => (/* reexport */ setSeconds),
+  setWeek: () => (/* reexport */ setWeek),
+  setWeekYear: () => (/* reexport */ setWeekYear),
+  setYear: () => (/* reexport */ setYear),
+  startOfDay: () => (/* reexport */ startOfDay),
+  startOfDecade: () => (/* reexport */ startOfDecade),
+  startOfHour: () => (/* reexport */ startOfHour),
+  startOfISOWeek: () => (/* reexport */ startOfISOWeek),
+  startOfISOWeekYear: () => (/* reexport */ startOfISOWeekYear),
+  startOfMinute: () => (/* reexport */ startOfMinute),
+  startOfMonth: () => (/* reexport */ startOfMonth),
+  startOfQuarter: () => (/* reexport */ startOfQuarter),
+  startOfSecond: () => (/* reexport */ startOfSecond),
+  startOfToday: () => (/* reexport */ startOfToday),
+  startOfTomorrow: () => (/* reexport */ startOfTomorrow),
+  startOfWeek: () => (/* reexport */ startOfWeek),
+  startOfWeekYear: () => (/* reexport */ startOfWeekYear),
+  startOfYear: () => (/* reexport */ startOfYear),
+  startOfYesterday: () => (/* reexport */ startOfYesterday),
+  sub: () => (/* reexport */ sub),
+  subBusinessDays: () => (/* reexport */ subBusinessDays),
+  subDays: () => (/* reexport */ subDays),
+  subHours: () => (/* reexport */ subHours),
+  subISOWeekYears: () => (/* reexport */ subISOWeekYears),
+  subMilliseconds: () => (/* reexport */ subMilliseconds),
+  subMinutes: () => (/* reexport */ subMinutes),
+  subMonths: () => (/* reexport */ subMonths),
+  subQuarters: () => (/* reexport */ subQuarters),
+  subSeconds: () => (/* reexport */ subSeconds),
+  subWeeks: () => (/* reexport */ subWeeks),
+  subYears: () => (/* reexport */ subYears),
+  toDate: () => (/* reexport */ toDate),
+  weeksToDays: () => (/* reexport */ weeksToDays),
+  yearsToMonths: () => (/* reexport */ yearsToMonths),
+  yearsToQuarters: () => (/* reexport */ yearsToQuarters)
 });
 
 ;// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/toInteger/index.js
@@ -17160,7 +17160,10 @@ exports.getReadyReviewsForm = getReadyReviewsForm;
 
 const popupForm = __webpack_require__(624);
 const createReviewForm = __webpack_require__(0);
-const { getReadyReviewsForm, getLocalStorageReview } = __webpack_require__(299);
+const {
+  getReadyReviewsForm,
+  getLocalStorageReview,
+} = __webpack_require__(299);
 const fns = __webpack_require__(857);
 
 let map;
@@ -17168,173 +17171,194 @@ let clusterer;
 const listOfPlacemarkLS = [];
 
 function mapInit() {
-    map = new ymaps.Map('map', {
-        center: [61.78900090727265, 34.375410146877094],
-        zoom: 16,
-    });
+  map = new ymaps.Map("map", {
+    center: [60.171149, 24.941167], // helsinki
+    zoom: 17,
+  });
 
-    map.events.add('click', (e) => {
-        const coordinates = e.get('coords');
-        openModalWindow(coordinates);
-    });
+  map.events.add("click", (e) => {
+    const coordinates = e.get("coords");
+    openModalWindow(coordinates);
+  });
 
-    const customItemContentLayout = ymaps.templateLayoutFactory.createClass(
-
-        `<div class="ballon-content">
-            <div class="ballon-header">
+  const customItemContentLayout = ymaps.templateLayoutFactory.createClass(
+    `<div class="balloon-content-custom">
+            <div class="balloon-header">
                 <div class="title">{{ properties.place }}</div>
             <br>
                 <a href="" class="adress">{{ properties.adress }}</a>
             </div>
 
-            <div class="ballon-body">{{ properties.reviewText }}</div>
+            <div class="balloon-body">{{ properties.reviewText }}</div>
 
-            <div class="ballon-footer">{{ properties.timestamp }}</div>
-        </div>`, {
-        build: function () {
-            customItemContentLayout.superclass.build.call(this);
-            const elemAddress = this.getElement().querySelector(".adress");
-            const coords = this.getData().geoObject.geometry.getCoordinates();
+            <div class="balloon-footer">{{ properties.timestamp }}</div>
+        </div>`,
+    {
+      build: function () {
+        customItemContentLayout.superclass.build.call(this);
+        const elemAddress = this.getElement().querySelector(".adress");
+        const coords = this.getData().geoObject.geometry.getCoordinates();
 
-            ymaps.geocode(coords).then((result) => {
-                return result.geoObjects.get(0).getAddressLine();
-            }).then(adress => {
-                elemAddress.innerText = adress;
-            });
-            elemAddress.addEventListener("click", event => {
-                event.preventDefault();
-                openModalWindow(coords);
-            });
-        }
+        ymaps
+          .geocode(coords)
+          .then((result) => {
+            return result.geoObjects.get(0).getAddressLine();
+          })
+          .then((adress) => {
+            elemAddress.innerText = adress;
+          });
+        elemAddress.addEventListener("click", (event) => {
+          event.preventDefault();
+          openModalWindow(coords);
+        });
+      },
     }
-    );
+  );
 
-    clusterer = new ymaps.Clusterer({
-        preset: 'islands#invertedVioletClusterIcons',
-        clusterDisableClickZoom: true,
-        groupByCoordinates: false,
-        clusterBalloonContentLayout: 'cluster#balloonCarousel',
-        clusterBalloonItemContentLayout: customItemContentLayout,
-    });
+  clusterer = new ymaps.Clusterer({
+    preset: "islands#invertedVioletClusterIcons",
+    clusterDisableClickZoom: true,
+    groupByCoordinates: false,
+    clusterBalloonContentLayout: "cluster#balloonCarousel",
+    clusterBalloonItemContentLayout: customItemContentLayout,
+  });
 
-    clusterer.options.set({
-        gridSize: 70,
-        clusterDisableClickZoom: true
-    });
+  clusterer.options.set({
+    gridSize: 70,
+    clusterDisableClickZoom: true,
+  });
 
-    addPlacemarksOnMap(map);
+  addPlacemarksOnMap(map);
 }
 
 function createPlacemark(review) {
-    let placemark = new ymaps.Placemark(review.coordinates, {
-        place: review.place,
-        reviewText: review.reviewText,
-        timestamp: review.timestamp,
-        author: review.author,
-        adress: review.location,
-        coordinates: review.coordinates
-    }, {
-        preset: "islands#violetDotIcon"
-    });
+  let placemark = new ymaps.Placemark(
+    review.coordinates,
+    {
+      place: review.place,
+      reviewText: review.reviewText,
+      timestamp: review.timestamp,
+      author: review.author,
+      adress: review.location,
+      coordinates: review.coordinates,
+    },
+    {
+      preset: "islands#violetDotIcon",
+    }
+  );
 
-    placemark.events.add('click', e => {
-        placemark.options.set('hasBalloon', false)
-        e.stopPropagation();
-        openModalWindow(e.get('target').geometry.getCoordinates());
-    })
-    listOfPlacemarkLS.push(placemark);
+  placemark.events.add("click", (e) => {
+    placemark.options.set("hasBalloon", false);
+    e.stopPropagation();
+    openModalWindow(e.get("target").geometry.getCoordinates());
+  });
+  listOfPlacemarkLS.push(placemark);
 }
 
 function addNewPlacemarks(currentPlacemarks) {
+  for (const review of currentPlacemarks) {
+    createPlacemark(review);
+  }
 
-    for (const review of currentPlacemarks) {
-        createPlacemark(review);
-    }
-
-    clusterer.add(listOfPlacemarkLS);
-    map.geoObjects.add(clusterer);
-};
+  clusterer.add(listOfPlacemarkLS);
+  map.geoObjects.add(clusterer);
+}
 
 function addPlacemarksOnMap(map) {
+  const reviewsList = getLocalStorageReview();
 
-    const reviewsList = getLocalStorageReview();
+  for (const review of reviewsList) {
+    createPlacemark(review);
+  }
 
-    for (const review of reviewsList) {
-        createPlacemark(review);
-    }
+  clusterer.removeAll();
+  map.geoObjects.remove(clusterer);
 
-    clusterer.removeAll();
-    map.geoObjects.remove(clusterer);
-
-    clusterer.add(listOfPlacemarkLS);
-    map.geoObjects.add(clusterer);
+  clusterer.add(listOfPlacemarkLS);
+  map.geoObjects.add(clusterer);
 }
 
 async function getAddress(coords) {
-    return new Promise((resolve) => {
-        ymaps.geocode(coords).then(function (res) {
-            const firstGeoObject = res.geoObjects.get(0);
-            let adress = firstGeoObject.getAddressLine();
-            resolve(adress);
-        })
+  return new Promise((resolve) => {
+    ymaps.geocode(coords).then(function (res) {
+      const firstGeoObject = res.geoObjects.get(0);
+      let adress = firstGeoObject.getAddressLine();
+      resolve(adress);
     });
+  });
 }
 
 async function openModalWindow(coordinates) {
-    const currentPlacemarks = listOfPlacemarkLS
-        .filter((i) => coordinates[0] === i.properties._data.coordinates[0] && coordinates[1] === i.properties._data.coordinates[1])
+  const currentPlacemarks = listOfPlacemarkLS.filter(
+    (i) =>
+      coordinates[0] === i.properties._data.coordinates[0] &&
+      coordinates[1] === i.properties._data.coordinates[1]
+  );
 
-    let location = await getAddress(coordinates);
+  let location = await getAddress(coordinates);
 
-    await map.balloon.open(coordinates, {
-        content: `<div class="location">${location}</div>` + `<hr>` +
-            `<div class="existingReviewsList">
-        ${await getReadyReviewsForm(currentPlacemarks) || `<h4>no reviews</h4>`}
-        </div> 
+  await map.balloon.open(coordinates, {
+    content:
+      `
+        <div class="location" title=${location}>${location}</div>
+        <hr>
+        <div class="existingReviewsList">
+            ${
+              (await getReadyReviewsForm(currentPlacemarks)) ||
+              //   `<h4>no reviews</h4>`
+              ""
+            }
+            </div>  
         ` + popupForm,
-        close: false,
-    })
+    close: false,
+  });
 
-    const existingReviewsList = document.querySelector('.existingReviewsList');
+  const existingReviewsList = document.querySelector(".existingReviewsList");
 
-    const addBtn = document.querySelector('#add-btn');
+  const addBtn = document.querySelector("#add-btn");
 
-    addBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+  addBtn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-        let currentPlasemarks = [];
+    let currentPlasemarks = [];
 
-        const getAuthor = document.querySelector('.author');
-        const getPlace = document.querySelector('.place');
-        const getReview = document.querySelector('.review');
-        const timestamp = fns.format(new Date(), 'PPp');
+    const getAuthor = document.querySelector(".author");
+    const getPlace = document.querySelector(".place");
+    const getReview = document.querySelector(".review");
+    const timestamp = fns.format(new Date(), "PPp");
 
-        const review = {
-            coordinates,
-            author: getAuthor.value,
-            place: getPlace.value,
-            reviewText: getReview.value,
-            timestamp: timestamp,
-            location: location,
-        }
+    const review = {
+      coordinates,
+      author: getAuthor.value,
+      place: getPlace.value,
+      reviewText: getReview.value,
+      timestamp: timestamp,
+      location: location,
+    };
 
-        getAuthor.value = '';
-        getPlace.value = '';
-        getReview.value = '';
+    getAuthor.value = "";
+    getPlace.value = "";
+    getReview.value = "";
 
-        currentPlasemarks.push(review);
-        addNewPlacemarks(currentPlasemarks);
+    currentPlasemarks.push(review);
+    addNewPlacemarks(currentPlasemarks);
 
-        localStorage.reviews = JSON.stringify([...getLocalStorageReview(), review]);
+    localStorage.reviews = JSON.stringify([...getLocalStorageReview(), review]);
 
-        const warning = document.querySelector('h4');
-        warning?.remove();
-        const reviewForNewPlacemark = document.createElement('div');
-        reviewForNewPlacemark.classList.add('existingReviewItem');
-        let form = createReviewForm(review.author, review.place, review.reviewText, review.timestamp);
-        reviewForNewPlacemark.innerHTML = form;
-        existingReviewsList.append(reviewForNewPlacemark);
-    })
+    const warning = document.querySelector("h4");
+    warning?.remove();
+    const reviewForNewPlacemark = document.createElement("div");
+    reviewForNewPlacemark.classList.add("existingReviewItem");
+    let form = createReviewForm(
+      review.author,
+      review.place,
+      review.reviewText,
+      review.timestamp
+    );
+    reviewForNewPlacemark.innerHTML = form;
+    existingReviewsList.append(reviewForNewPlacemark);
+    map.balloon.close();
+  });
 }
 
 ymaps.ready(mapInit);

@@ -1,21 +1,31 @@
 .form {
-  width: 320px;
-  overflow: scroll;
+  width: 310px;
+  // overflow: scroll;
 }
 
 .location {
-  width: 300px;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Добавляем многоточие в конце текста */
+}
+
+.existingReviewsList {
+  background-color: rgb(248, 248, 241);
+  max-height: 95px;
+  overflow-y: scroll;
 }
 
 .form-title {
   font-size: 16px;
-  text-align: center;
-  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-left: 2px;
 }
 
 .form-row {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .form-input {
@@ -38,7 +48,7 @@
 }
 
 .form-input--textarea {
-  height: 98px;
+  height: 80px;
   resize: none;
   font-family: unset;
   font-size: 14px;
@@ -49,15 +59,21 @@
 }
 
 .btn {
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 7px 50px;
-  outline: 0;
-  border: 0.5px solid black;
-  cursor: pointer;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 16px;
   border-radius: 3px;
+  line-height: 16px;
   background-color: #ffe54c;
+  border: none;
+  width: 140px;
+}
+
+.btn:hover {
+  background: #ffde19;
+  cursor: pointer;
+}
+
+.existingReviewItem-text {
+  word-break: break-all;
 }
