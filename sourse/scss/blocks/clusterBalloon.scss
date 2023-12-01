@@ -1,19 +1,19 @@
-.ballon-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    height: 150px;
+.balloon-content-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 150px;
 
-    .ballon-header {
-        .title {
-            font-weight: bold;
-            align-self: center;
-        }
+  .balloon-header {
+    .title {
+      font-weight: bold;
+      align-self: center;
     }
+  }
 
-    .ballon-footer {
-        font-style: italic;
-        align-self: center;
-    }
+  .balloon-footer {
+    font-style: italic;
+    align-self: center;
+  }
 }
